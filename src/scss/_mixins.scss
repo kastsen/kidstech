@@ -1,0 +1,38 @@
+@import "variables";
+
+@mixin backgroundCover($url) {
+  background: url($url);
+  background-size: cover;
+}
+
+@mixin font($size) {
+  font-size: $size;
+  font-weight: 800;
+  font-family: 'Lato', sans-serif;
+}
+
+@mixin fontSize($sizeDesktop, $sizeTablet, $sizeMobile) {
+    @include font($sizeDesktop);
+
+    @media (max-width: $desktop - 1px) {
+      font-size: $sizeTablet;
+    }
+
+    @media (max-width: $tablet - 1px) {
+      font-size: $sizeMobile;
+    }
+}
+
+@mixin overlay {
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: black;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) -2.16%, rgba(15, 20, 32, 0.5) 97.84%);
+    z-index: 0;
+  }
+}

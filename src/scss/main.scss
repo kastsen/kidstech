@@ -1,0 +1,30 @@
+@import "variables";
+@import "mixins";
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background: white;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  color: $primary-color;
+  scroll-behavior: smooth;
+  min-width: 360px;
+}
+
+.container {
+  width: calc(100% - 50px);
+  max-width: 1084px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+}
