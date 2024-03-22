@@ -4,6 +4,7 @@
 .tabs-container {
   $itemMargin: 18px;
   $sidebarWidth: 264px;
+  min-width: 903px;
 
   display: flex;
   justify-content: space-between;
@@ -14,7 +15,7 @@
 
   &__sidebar {
     flex: 0 0 $sidebarWidth;
-    margin-right: 24px - $itemMargin/2;
+    margin-right: calc(24px - $itemMargin/2);
     list-style: none;
     border: 1px solid $border-color;
     padding: 12px;
@@ -27,7 +28,6 @@
     font-size: 18px;
     line-height: 18px;
     border-radius: 12px;
-
 
     &:hover {
       color: $color-green;
@@ -46,15 +46,10 @@
     min-width: $sidebarWidth;
   }
   &__item {
-    flex: 0 0 calc(100% - $itemMargin); // 264px;
-    @media (min-width: 703px) {
-      flex: 0 0 calc(50% - $itemMargin); // 264px;
-    }
-    @media (min-width: 903px) {
-      flex: 0 0 calc(33% - $itemMargin); // 264px;
-    }
-    margin-right: $itemMargin/2;
-    margin-left: $itemMargin/2;
+    flex: 0 0 calc(33% - $itemMargin);
+
+    margin-right: calc($itemMargin/2);
+    margin-left: calc($itemMargin/2);
     margin-bottom: $itemMargin;
     border-radius: 18px;
     box-shadow: 0 10px 13px -4px rgba(35, 35, 95, 0.19);
